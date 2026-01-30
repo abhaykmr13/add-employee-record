@@ -49,7 +49,7 @@ public class EmployeeController {
 
     @DeleteMapping("/{employeeId}")
     public ResponseEntity<Void> deleteEmployeeRecord(@PathVariable UUID employeeId) {
-
+        System.out.println("Delete the employee Record");
         employeeService.deleteEmployee(employeeId);
         return ResponseEntity.noContent().build();
 
